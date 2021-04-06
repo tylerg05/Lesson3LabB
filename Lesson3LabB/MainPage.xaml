@@ -9,6 +9,16 @@
         </Frame>
         <Label x:Name="Label_Message" Text="Enter your age below" FontSize="Title" Padding="30,10,30,10"/>
         <DatePicker x:Name="Date_Age" MinimumDate="1/1/1900" MaximumDate="12/31/2020"/>
+        <Picker x:Name="Picker_Country" Title="What country are you from?">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>United States</x:String>
+                    <x:String>Germany</x:String>
+                    <x:String>United Kingdom</x:String>
+                    <x:String>Japan</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
         <Button x:Name="Btn" Text="Calculate" Clicked="Btn_Clicked"></Button>
 
 

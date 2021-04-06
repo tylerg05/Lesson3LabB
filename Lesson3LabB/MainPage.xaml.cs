@@ -19,15 +19,37 @@ namespace Lesson3LabB
         {
             int yob = Date_Age.Date.Year;
             int age = 2021 - yob;
-            if (age >= 21)
+            int drinkingAge = 0;
+            // usa
+            if (Picker_Country.SelectedIndex == 0)
+            {
+                drinkingAge = 21;
+            }
+            // germany
+            else if (Picker_Country.SelectedIndex == 1)
+            {
+                drinkingAge = 16;
+            }
+            // uk
+            else if (Picker_Country.SelectedIndex == 2)
+            {
+                drinkingAge = 18;
+            }
+            // japan
+            else
+            {
+                drinkingAge = 20;
+            }
+            if (age >= drinkingAge)
             {
                 Label_Message.Text = "You are already drinking age.";
             }
             else
             {
-                int yearsUntilDrink = 21 - age;
+                int yearsUntilDrink = drinkingAge - age;
                 Label_Message.Text = $"You have {yearsUntilDrink} years until you can legally buy alcohol";
             }
         }
+
     }
 }
